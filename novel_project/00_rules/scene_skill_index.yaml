@@ -1,0 +1,45 @@
+# 场景类型 → 技能路由
+# build_packet.py 根据 scene_type 自动挂载对应的 skill 和风格锚点
+
+scene_skills:
+  dialogue:
+    name: 对话场
+    skills:
+      - dialogue_subtext
+      - action_not_said
+    style_anchor: dialogue_cold.md
+
+  action:
+    name: 动作/冲突场
+    skills:
+      - short_sentences
+      - impact_chain
+    style_anchor: action_tension.md
+
+  emotion:
+    name: 暧昧/情绪场
+    skills:
+      - emotion_through_action
+      - reduce_abstraction
+    style_anchor: emotion_ambiguity.md
+
+  revelation:
+    name: 信息揭示场
+    skills:
+      - info_drip_not_dump
+      - show_dont_tell_minimal
+    style_anchor: dialogue_cold.md
+
+  atmosphere:
+    name: 写景/氛围场
+    skills:
+      - sensory_details
+      - reduce_adjective_density
+    style_anchor: action_tension.md
+
+  flashback:
+    name: 回忆场
+    skills:
+      - tense_shift_past
+      - memory_not_narration
+    style_anchor: emotion_ambiguity.md

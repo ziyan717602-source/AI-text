@@ -1,0 +1,59 @@
+# 揭示账本（Reveal Ledger）
+# 每个秘密：最早揭示章节、允许暗示的内容、禁止写出的内容
+# build_packet.py 对比当前章节号，自动裁剪 packet 中的禁止内容
+
+secrets:
+  - id: 功法_正宗性
+    name: 功法并非紫罗峡正宗道法
+    reveal_chapter: mid_ch015
+    allowed_before:
+      - 刘得宜在修炼
+      - 功法系统包含能量网络
+    forbidden_before:
+      - 功法的真正来源
+      - 功法创造者的真实身份
+      - 功法与紫罗峡正宗道法的区别
+
+  - id: 功法_创造者
+    name: 功法创造者的真实身份和目的
+    reveal_chapter: mid_ch030
+    allowed_before:
+      - 一个神秘的存在在指导刘得宜
+      - 功法系统越来越复杂
+    forbidden_before:
+      - 创造者的身份
+      - 创造者的真正目的
+      - 功法的终极形态
+
+  - id: 天劫
+    name: 刘得宜未来可能面临的天劫
+    reveal_chapter: mid_ch025
+    allowed_before:
+      - 修炼有风险
+      - 功法系统有隐患
+    forbidden_before:
+      - 天劫的具体内容
+      - 天劫的时间线
+      - 天劫的应对方法
+
+  - id: 金丹计划
+    name: 刘得宜三年内炼成金丹的具体计划
+    reveal_chapter: mid_ch020
+    allowed_before:
+      - 刘得宜有长远计划
+      - 他在暗中布局
+    forbidden_before:
+      - 金丹的具体时间线
+      - 炼成金丹的条件
+      - 金丹的真正意义
+
+  - id: 紫罗峡_历史
+    name: 紫罗峡的完整传承和历史
+    reveal_chapter: mid_ch040
+    allowed_before:
+      - 紫罗峡是一个修行门派
+      - 紫罗峡有功法传承
+    forbidden_before:
+      - 紫罗峡的创建历史
+      - 紫罗峡的完整传承
+      - 紫罗峡与正统道法的关系

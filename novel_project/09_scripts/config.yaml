@@ -1,0 +1,37 @@
+# 全局配置
+
+project_root: "j:/Project/小说/novel_project"
+
+# Writer 约束比例
+writer_constraint_ratio:
+  positive_anchor: 0.60    # 正向锚定（风格锚点 + skill）
+  iron_rules: 0.20         # 铁律底线（3-5 条致命禁令）
+  boundary: 0.20           # 边界控制（只看 packet）
+
+# Writer 生成模式
+writer_generation:
+  internal_beat_sketch: true   # 先输出 <beat_sketch> 再输出 <prose>
+  beat_sketch_count: 5-8       # 微观节拍数量
+
+# Auditor 触发策略
+auditor_strategy:
+  layer1_always_run: true      # Layer 1 规则检测始终运行
+  layer2_trigger_threshold: 3  # Layer 1 问题数 ≥ 此值时触发 Layer 2
+
+# Patch 触发策略
+patch_strategy:
+  hard_fail_always_patch: true   # hard_fail 必须 patch
+  soft_flag_record_only: true    # soft_flag 只记录不改
+
+# Context 预算
+context_budget:
+  max_packet_chars: 18000
+  max_style_anchor_chars: 800
+  max_skill_chars: 500
+
+# 模型配置
+models:
+  planner: "claude-sonnet-4-6"
+  writer: "claude-sonnet-4-6"
+  auditor: "claude-sonnet-4-6"
+  patch: "claude-sonnet-4-6"
